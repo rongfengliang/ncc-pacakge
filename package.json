@@ -1,0 +1,13 @@
+{
+  "name": "first",
+  "version": "1.0.0",
+  "main": "lib/app.js",
+  "types": "lib/app.d.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "scripts": {
+    "build":"tsc"
+  }
+}

@@ -1,9 +1,17 @@
 name: CI
 on: push
+env:
+  APPVERSION: v1.0
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: list dirs
-      run: ls -sialh
+      run: ls -sialh && echo "${{secrets.name}}"
+  app:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: list dirs
+      run: ls -sialh && echo "${{env.APPVERSION}}"
